@@ -49,11 +49,19 @@ ul {
 
 .btn {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
   padding: 12px 36px;
   color: white;
   background: var(--primary);
-  border-radius: 40px;
+  border-radius: 30px;
+  white-space: nowrap;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--primary-hover);
+  transform: scale(1.03);
 }
 
 /* Sidebar Styles */
@@ -104,6 +112,10 @@ ul {
   width: 100%;
   padding: 20px;
   transition: all 0.3s ease;
+}
+
+.sidebar .nav li a:hover {
+  color: var(--primary-hover)
 }
 
 .sidebar .nav li a i {
@@ -189,3 +201,4 @@ ul {
   .fa-square-js {
     color: #e2a128;
   }
+
