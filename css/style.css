@@ -10,25 +10,32 @@
   --primary: #dc3545;
   --primary-hover: #ca2333;
  
-  --light-color: #dff3e4;
+  --light-color: #fff;
 }
 
+/* ! - DEVELOPMENT ONLY - REMOVE - ! */
+/* .hidden {
+  display: none !important;
+} */
+
 /* Overall Styles */
+body {
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
   outline: none;
+  text-decoration: none;
+  box-sizing: border-box; 
+  
 }
 
 ::before, ::after {
   box-sizing: border-box;
-}
-
-body {
-  line-height: 1.5rem;
-  font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -39,7 +46,109 @@ ul {
   display: flex;
 }
 
+.section {
+  background: var(--dark-0);
+  min-height: 100vh;
+  padding: 0 30px;
+  opacity: 1;
+  /* position: fixed; - Not using, I want mine to scroll */
+  /* left: 270px; - Messes up Home photo, doesn't seem to do anything else */ 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
+}
+
+/* THESE ALL SEEM TO BE RELATED TO PAGE SWITCHING, WHICH I'M NOT DOING
+.section.back-section {
+    z-index: 1;
+}
+.section.active {
+    z-index: 2;
+    opacity: 1;
+    animation: slideSection 1s ease;
+}
+@keyframes slideSection {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+*/
+
+/* Next two are for background alernating. My own addition to the template. */
+.section-area:nth-child(even) {
+  background: var(--dark-1);
+}
+
+.section-area:nth-child(odd) {
+  background: var(--dark-2);
+}
+
+.padd-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+}
+
+.section .container {
+  padding-top: 60px;
+  padding-bottom: 70px;
+}
+
+.section-title {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 40px;
+  color: white;
+  font-weight: 700;
+  position: relative;
+}
+
+/* Flair under section titles. Keep? */
+.section-title h2::before {
+    content: '';
+    height: 4px;
+    width: 50px;
+    background-color: var(--primary);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.section-title h2::after {
+    content: '';
+    height: 4px;
+    width: 25px;
+    background-color: var(--primary);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+}
+
 .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+}
+
+.home-row {
   display: flex;
   position: relative;
   justify-content: center;
@@ -48,14 +157,15 @@ ul {
 }
 
 .btn {
-  font-size: 1.5rem;
+  font-size: 16px;
   font-weight: 500;
-  padding: 12px 36px;
+  padding: 12px 35px;
   color: white;
-  background: var(--primary);
-  border-radius: 30px;
-  white-space: nowrap;
+  border-radius: 40px;
   display: inline-block;
+  white-space: nowrap;
+  border: none;
+  background: var(--primary);
   transition: all 0.3s ease;
 }
 
@@ -64,7 +174,13 @@ ul {
   transform: scale(1.03);
 }
 
+.shadow-dark {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+/* Overall Styles End */
+
 /* Sidebar Styles */
+/* Leaving all my own styles - template styles break my sidebar */
 .sidebar {
   width: 270px;
   height: 100vh;
@@ -128,16 +244,14 @@ ul {
   padding-left: 270px;
   width: 100vw;
 }
-
+/* Sidebar Styles End */
 
 /* Main Content Styles */
-.section {
-  min-height: 100vh;
-}
+
 
 /* Home Styles */
 .home-section {
-  background-image: url(/images/shane-work.jpg);
+  background-image: url(/images/personal/shane-work.jpg);
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -201,4 +315,93 @@ ul {
   .fa-square-js {
     color: #e2a128;
   }
+/* Home Styles End */
+
+/* Projects & Challenges Styles */
+.portfolio .container
+{
+    padding-bottom: 40px;
+}
+.portfolio .portfolio-heading
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+.portfolio .portfolio-heading h2
+{
+    color: white;
+    font-weight: 500;
+}
+.portfolio .portfolio-item
+{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+}
+.portfolio .portfolio-item-inner
+{
+    border: 6px solid var(--dark-0);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.portfolio .portfolio-item-inner .portfolio-img img
+{
+    width: 100%;
+    display: block;
+}
+/* Projects & Challenges Styles End */
+
+
+/* Blog Styles */
+.broken-code {
+  max-width: 100%;
+}
+
+/* Blog Styles End */
+
+
+/* About Styles */
+
+.about-content {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.about-content .about-text {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 30px;
+  color: var(--light-color);
+}
+
+.about-content .about-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.about-content .about-text h3 span {
+  color: var(--primary);
+}
+
+.about-content .about-text p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.about-content .personal-info {
+  flex: 0 0 60%;
+  max-width: 60%;
+  background: red;
+}
+/* About Styles End */
+
+
+/* Contact Styles */
+
+/* Contact Styles End */
+
+
 
