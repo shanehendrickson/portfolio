@@ -527,5 +527,18 @@ ul {
 }
 /* Contact Styles End */
 
+/* Responsive Styles Start */
+/* Responsive Styles End */
+@media (max-width: 1199px) {
+  .sidebar {
+    left: -270px;
+  }
+
+  .main-content {
+    padding-left: 0;
+  }
+}
+
+.about .about-content .personal-info
 
 /* Flip Test */
