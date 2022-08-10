@@ -477,18 +477,19 @@
             <h2 class="mb-3 text-5 text-white text-uppercase text-center text-md-start">Send me a message</h2>
 
       <!-- Form Begin -->
-			<form name="contact" data-netlify="true" id="contact-form" class="form-dark" method="post">
+			<form name="contact" data-netlify="true" data-netlify-recaptcha="true" id="contact-form" class="form-dark" method="post">
 			  <div class="row g-4">
-                <div class="col-xl-6">
-                    <input name="name" type="text" class="form-control" required placeholder="Name">
-                </div>
-                <div class="col-xl-6">
-                    <input name="email" type="email" class="form-control" required placeholder="Email">
-                </div>
-				<div class="col">
-					<textarea name="form-message" class="form-control" rows="5" required placeholder="Tell us more about your needs........"></textarea>
-				</div>
-              </div>
+          <div class="col-xl-6">
+              <input name="name" type="text" class="form-control" required placeholder="Name">
+          </div>
+          <div class="col-xl-6">
+            <input name="email" type="email" class="form-control" required placeholder="Email">
+          </div>
+				  <div class="col">
+					  <textarea name="form-message" class="form-control" rows="5" required placeholder="What's on your mind........"></textarea>
+				  </div>
+          <div class="mb-3" data-netlify-recaptcha="true"></div>
+        </div>
               <p class="text-center mt-4 mb-0">
 				<button id="submit-btn" class="btn btn-primary rounded-pill d-inline-flex" type="submit">Send Message</button>
               </p>
