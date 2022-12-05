@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/c7ed50e499.js" crossorigin="anonymous"></script>
 
@@ -12,11 +13,9 @@
   <title>Shane</title>
 </head>
 <body>
-  <div class="container">
-      
+  <div class="container">      
     <nav class="navigation">
-      <ul>
-        
+      <ul>        
         <li><a href="#hero" onclick="toggleMenu();">Home</a></li>
         <li><a href="#about" onclick="toggleMenu();">About</a></li>
         <li><a href="#projects" onclick="toggleMenu();">Projects</a></li>
@@ -24,10 +23,13 @@
         <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
       </ul>
     </nav>
+
     <main class="main">
       <div class="topbar"> <!-- change to button? -->
         <a href="#" class="logo">Portfolio</a> <!-- change to logo? -->
-        <div class="toggle"><i class="fa-solid fa-bars"></i></div>
+        <div class="toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </div>
 
       <!-- banner -->
@@ -49,7 +51,7 @@
         </div>
       </section>
 
-      <!-- <section class="about adjust" id="about">
+      <section class="about adjust" id="about">
         <div class="title">
           <h2>About Me</h2>
         </div>
@@ -62,7 +64,34 @@
             <img src="" alt="">
           </div>
         </div>
-      </section> -->
+      </section>
+
+      <section class="projects adjust" id="projects">
+        <div class="title">
+          <h2>Recent Projects</h2>
+          <p></p>
+        </div>
+        <div class="content">
+
+          <a href="#" target="_blank">
+            <div class="item-box">
+              <div class="cover-box">
+                <img src="images/projects/sharktooth-800x540.png" alt="">
+              </div>
+              <div class="reveal-box">
+                
+                <h3>Loan Calculator</h3>
+                <p>
+                  Built with HTML, CSS, Boostrap.<br>
+                  Coded in JavaScript.<br>
+                  
+                </p>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </section>
 
 
     </main>
