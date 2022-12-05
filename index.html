@@ -5,145 +5,199 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/c7ed50e499.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/c7ed50e499.js" crossorigin="anonymous"></script>
 
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-  <title>Shane</title>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Shane's Portfolio</title>
 </head>
+
 <body>
-  <div class="container">      
-    <nav class="navigation">
-      <ul>        
-        <li><a href="#hero" onclick="toggleMenu();">Home</a></li>
+  <div class="container">
+    <div class="navigation">
+      <ul>
+        <li><a href="#banner" onclick="toggleMenu();">Home</a></li>
         <li><a href="#about" onclick="toggleMenu();">About</a></li>
         <li><a href="#projects" onclick="toggleMenu();">Projects</a></li>
-        <li><a href="#challenges" onclick="toggleMenu();">Challenges</a></li>
+        <li><a href="#challenges" onclick="toggleMenu();">Challenges</a></li>        
         <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
       </ul>
-    </nav>
+    </div>
 
-    <main class="main">
-      <div class="topbar"> <!-- change to button? -->
-        <a href="#" class="logo">Portfolio</a> <!-- change to logo? -->
+    <div class="main">
+      <div class="topbar"> <!--change to button at some point-->
+        <a href="#" class="logo">Portfolio</a>
         <div class="toggle">
           <i class="fa-solid fa-bars"></i>
-        </div>
+        </div>         
       </div>
 
       <!-- banner -->
-      <section class="hero" id="hero">
+      <section class="banner" id="banner">
         <div class="content">
-          <h4>Hi there! If you're seeing this, I am working on it right now. Seriously, I'm at my desk typing.</h4>
-          <div class="img-box">
-            
-            <img src="images/personal/profile-photo.png" alt="shane photo">
+          <div class="imgBx">
+            <img src="img/profile-photo.png" alt="">
           </div>
           <h3>Shane Hendrickson</h3>
-          <p class="hero-desc">web developer</p>
-          <!-- insert link button to CV -->
-          <a href="#" class="btn contact-btn">Contact Me</a>
-          <ul class="social-media">
-            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+          <p>I'm a Web Developer</p>
+          <a href="cv/index.html" class="btn cvBtn">Download My CV</a>
+          <a href="#contact" class="btn contactBtn">Contact Me</a>
+          <ul class="socialMedia">
+            <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
           </ul>
         </div>
       </section>
 
+      <!-- About -->
       <section class="about adjust" id="about">
         <div class="title">
           <h2>About Me</h2>
         </div>
         <div class="content">
-          <div class="text-box">
-            <p>My journey to developer starts with my time in college studying Game Design. That led me to becoming a founding member of an indie game studio. Wanting to help the other team members in a greater way, I began tinkering with C# in Unity. That's when I realized I had found something I'd been missing: a perpetual puzzle that always needs solving.</p>
-            <p>I threw myself into studying web development full-time. My path continues to lead me through HTML, CSS, JavaScript, C#, and beyond. This is what I want to do now. I'm eager and motivated to solve problems with code and continue learning.</p>
+          <div class="textBox">
+            <p>My journey to developer starts with my time in college studying Game Design. That led me to becoming a founding member of an indie game studio. Wanting to help the other team members in a greater way, I began tinkering with C# in Unity. That's when I realized I had found something I'd been missing: a perpetual puzzle that always needs solving.</p><br>
+            <p>I decided to throw myself into studying web development full-time. My path continues to lead me through HTML, CSS, JavaScript, C#, and beyond. This is what I want to do now. I'm eager and motivated to solve problems with code and learn from those who came before me.</p>
           </div>
-          <div class="img-box">
-            <img src="" alt="">
+          <div class="imgBx">
+            <img src="img/shane-work.jpg" alt="">
           </div>
         </div>
       </section>
 
+      <!-- add skills section? or make part of about section? -->
+
+      <!-- Projects -->
       <section class="projects adjust" id="projects">
         <div class="title">
           <h2>Recent Projects</h2>
           <p></p>
         </div>
         <div class="content">
-
-          <a href="#" target="_blank">
-            <div class="item-box">
-              <div class="cover-box">
-                <img src="images/projects/sharktooth-800x540.png" alt="">
+          
+          <a href="https://sharktoothloans.netlify.app/" target="_blank">
+            <div class="workBx">
+              <div class="imgBx">
+                <img src="img/sharktooth-500x360.png" alt="">
               </div>
-              <div class="reveal-box">
-                
+              <div class="textBx">
                 <h3>Loan Calculator</h3>
-                <p>
-                  Built with HTML, CSS, Boostrap.<br>
-                  Coded in JavaScript.<br>
-                  
-                </p>
+                <p>Enter loan amount and interest rate.<br>
+                Prints to screen full amortization schedule.<br>
+                Built with HTML/CSS. Coded in JavaScript.</p>
               </div>
             </div>
           </a>
 
+            <div class="workBx">
+              <div class="imgBx">
+                <img src="img/ComingSoon-500x360.png" alt="">
+              </div>
+              <div class="textBx">
+                <h3>Project</h3>
+              </div>
+            </div>
+
+            <div class="workBx">
+              <div class="imgBx">
+                <img src="img/ComingSoon-500x360.png" alt="">
+              </div>
+              <div class="textBx">
+                <h3>Project</h3>
+              </div>
+          </div>
+          
+          
+
         </div>
       </section>
 
-      <section class="projects adjust" id="challenges">
+      
+      <!-- Challenges -->
+      <section class="challenges adjust" id="challenges">
         <div class="title">
-          <h2>Recent Projects</h2>
-          <p></p>
+          <h2>Coding Challenges</h2>
+          <p>These coding challenges were done to test my understanding of key concepts. Also, they were just fun to do.</p>
         </div>
         <div class="content">
 
-          <a href="#" target="_blank">
-            <div class="item-box">
-              <div class="cover-box">
-                <img src="images/challenges/Fizzam-500x360.png" alt="">
+          <a href="https://fizzam.netlify.app/" target="_blank">
+            <div class="workBx">
+              <div class="imgBx">
+                <img src="img/Fizzam-500x360 (1).png" alt="">
               </div>
-              <div class="reveal-box">                
+              <div class="textBx">
                 <h3>FizzBuzz with Flair</h3>
-                <p>
-                  Choose two numbers and press the button. App will display numbers 1-100, replacing some numbers with "Fizz", "Buzz", or "Gazz" based on your choices.
-                </p>
-                <p>
-                  Built with HTML, CSS, Boostrap.<br>
-                  Coded in JavaScript.<br>                  
-                </p>
+                <p>Choose your own Fizz and Buzz values.<br>
+                  Prints 1-100 to screen.<br> 
+                  Replaces numbers divisible by your choices. <br>
+                  Coded in JavaScript.</p>
+              </div>
+            </div>
+          </a>
+          <a href="https://mage-clash.netlify.app/" target="_blank">
+            <div class="workBx">
+              <div class="imgBx">
+                <img src="img/mageclash-800x540.png" alt="">
+              </div>
+              <div class="textBx">
+                <h3>rock paper scissors with wizards</h3>
+                <p>Start with 10 health points.<br>
+                  Choose a spell. Try to beat AI.<br>
+                  First to zero HP loses.<br>
+                  Coded in JavaScript.</p>
               </div>
             </div>
           </a>
 
-          <a href="#" target="_blank">
-            <div class="item-box">
-              <div class="cover-box">
-                <img src="images/challenges/MageClash-500x360.png" alt="">
+            <div class="workBx">
+              <div class="imgBx">
+                <img src="img/ComingSoon-500x360.png" alt="">
               </div>
-              <div class="reveal-box">                
-                <h3>Rock, Paper, Scissors, Wizards</h3>
-                <p>
-                  Pick one of five elements. CPU will also randomly choose.<br>
-                  Each losing cast costs a health point. First to zero loses!
-                </p>
-                <p>
-                  Built with HTML, CSS, Boostrap.<br>
-                  Coded in JavaScript.<br>                  
-                </p>
+              <div class="textBx">
+                <h3>Project</h3>
               </div>
             </div>
-          </a>
+         
+
 
         </div>
       </section>
 
+      <!-- Contact -->
+      <section class="contact adjust" id="contact">
+        <div class="title">
+          <h2>Contact Me</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem non rem in molestiae officia magnam amet tenetur officiis minima dolorum.</p>
+        </div>
+        <form  name="contact" data-netlify="true" data-netlify-recaptcha="true" id="contact-form" method="post" class="contactForm">
+          <div class="row">
+            <input type="text" name="" placeholder="Name">
+            <input type="email" name="" placeholder="Email">
+          </div>          
+          <div class="row2">
+            <textarea placeholder="Message" name="" id="" cols="30" rows="10"></textarea>
+          </div>
+          <div class="mb-3" data-netlify-recaptcha="true"></div>
+          <div class="row2">
+            <button id="submit-btn" class="btn" type="submit">Send Message</button>
+          </div>
+        </form>
+      </section>
 
-    </main>
+      <!-- Footer -->
+      <div class="copyright">
+        <p>Copyright &copy;2022 Shane Hendrickson</p>
+      </div>
+      
+
+
+
+    </div>
   </div>
-  
-  <script src="js/theme.js"></script>
+
+  <script src="js/site.js"></script>
 </body>
 </html>
