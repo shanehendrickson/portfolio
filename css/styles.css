@@ -262,14 +262,13 @@ h3 {
   align-items: center;
   transform: translateY(100%);
   transition: 0.5s ease-in-out;
+  padding: 10px;
 }
 
 .projects .content .item-box:hover .reveal-box {
   transform: translateY(0);
   color: var(--light);
-  display: flex;
-  justify-content: flex-start;
-  padding-top: 25px;
+  font-weight: 400;
 }
 
 .projects .content .item-box .reveal-box h3 {
