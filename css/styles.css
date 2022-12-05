@@ -1,133 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-:root {
-  --white-color: #f0f0f0;
-  
-  --primary: #18a558;
-  --primary-dark: #116530;
-
-  --gray-very-dark: #111418;
-  --gray-dark: #212229;
-  --gray-medium-dark: #343a40;
-  --gray-medium: #495057;
-  --gray-medium-light: #6c757d;
-}
-
-.bg-primary-dark {
-  background-color: var(--primary-dark);
-}
-
-.bg-gray-dark {
-  background-color: var(--gray-dark);
-}
-
-.bg-gray-medium-dark {
-  background-color: var(--gray-medium-dark);
-}
-
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --dark1: #333;
+  --light: #eee;
 }
 
 body {
-  color: var(--white-color);
+  overflow-x: hidden;
 }
 
-nav {
-  background-color: var(--primary-dark);
-}
-
-footer {
-  background-color: var(--primary-dark);
-}
-
-footer .social>a {
-  color: var(--white-color);
-  opacity: 0.75;
-}
-
-footer .social>a:hover {
-  opacity: 0.9;
-  color: var(--primary)
-}
-
-.nav-link {
-  font-size: 1.5rem;
-}
-
-.navbar a {
-  color: white;
-  opacity: 0.75
-}
-
-.navbar a:hover {
-  color: var(--primary)
-}
-
-.sticky-footer {
-  position: sticky;
-  left: 0;
-  bottom: 0;
+.container {
+  position: relative;
   width: 100%;
 }
 
-.section {
-  width: 100%;
-  height: 100vh;
+.navigation {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  background: var(--light);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.section-heading {
-  font-size: calc(1.95rem + 8.4vw);
-  font-weight: 700;
-}
-
-.home-section > h1 {
-  font-size: 4rem;
-}
-
-.home-section > p {
-  font-style: italic;
-  font-size: 2rem;
-  font-weight: 200;
-  color: var(--primary)
-}
-
-.home-section > .btn-outline-primary {
-  border-color: var(--primary);
-  border-width: 3px;
-}
-
-.home-section > .btn {
-  color: var(--primary);
-  font-weight: 600;
-}
-
-.home-section > .btn:hover {
-  background-color: var(--primary);
-  color: white;
-}
-
-/* Portfolio Section Testing */
-
-
-
-.portfolio {
-max-width: 1200px;
-padding: auto;
-}
-
-.portfolio .portfolio-box {
-  position: relative;
-}
-
-.portfolio .portfolio-box .portfolio-img {
-  position: relative;
   overflow: hidden;
+  /* transition: width 0.5s, left 0.5s; */ /* add back if using original*/
 }
 
+/* Add back if using original */
+/* .navigation.active {
+  width: 0;
+} */
+
+.navigation ul {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+}
