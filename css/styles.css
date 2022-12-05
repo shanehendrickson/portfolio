@@ -53,3 +53,8 @@ body {
   width: 100%;
   list-style: none;
 }
+
+.main {
+  position: absolute;
+  left: 200px;
+}
