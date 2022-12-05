@@ -35,6 +35,9 @@ body {
   /* transition: width 0.5s, left 0.5s; */ /* add back if using original*/
 }
 
+/* NAVIGATION
+***************************** */
+
 /* Add back if using original */
 /* .navigation.active {
   width: 0;
@@ -53,6 +56,31 @@ body {
   width: 100%;
   list-style: none;
 }
+
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--dark1);
+  font-weight: 500;
+  letter-spacing: 2px;
+  opacity: 0.5;
+  font-size: 1.2rem;
+  line-height: 4rem;
+  justify-content: center;
+  transition: opacity 0.3s ;
+}
+
+.navigation ul li a:hover {
+  opacity: 1;
+}
+
+/* MAIN
+***************************** */
 
 .main {
   position: absolute;
