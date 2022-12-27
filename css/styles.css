@@ -134,6 +134,11 @@ body {
   color: var(--black);
 }
 
+.logo img {
+  max-height: 3rem;
+  margin-top: 0.5rem;
+}
+
 section {
   position: relative;
   min-height: 100vh;
