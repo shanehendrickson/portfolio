@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Project List Template</title>
+		<link rel="stylesheet" href="/style.css" />
+	</head>
+	<body>
+		<!-- NAVBAR -->
+		<nav class="navbar">
+			<div class="container nav-inner">
+				<a href="/index.html" class="nav-logo">Home</a>
+
+				<div class="nav-links">
+					<a href="SoftwareList.html">Software</a>
+					<a href="GameList.html">Games</a>
+					<a href="ArtList.html">Art</a>
+				</div>
+			</div>
+		</nav>
+
+		<section class="projects-list-header">
+			<div class="container">
+				<h1>Art Projects</h1>
+				<p class="section-tagline"></p>
+			</div>
+		</section>
+
+		<section class="projects-list-grid-section">
+			<div class="container">
+				<div class="art-grid">
+					<!-- One card per project -->
+					<div class="art-item" data-title="septembit-2021">
+						<img
+							src="/assets/images/art/Stb21_Entry.png"
+							alt="my entry for Septembit 2021"
+						/>
+						<div class="art-overlay">
+							<span>Septembit 2021 - Fantasy Adventure</span>
+						</div>
+					</div>
+
+					<div class="art-item">
+						<img
+							src="/assets/images/art/Stb24_ShaneHPixels_Entry_large.png"
+							alt="my entry for Septembit 2024"
+						/>
+						<!--Image of project -->
+
+						<div class="art-overlay">
+							<span>Septembit 2024 - Monster Maker</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div id="lightbox" class="lightbox">
+			<div class="lightbox-content">
+				<img id="lightbox-img" src="" alt="" />
+			</div>
+		</div>
+
+		<script>
+			const lightbox = document.getElementById("lightbox");
+			const lightboxImg = document.getElementById("lightbox-img");
+
+			document.querySelectorAll(".art-item img").forEach((img) => {
+				img.addEventListener("click", () => {
+					lightboxImg.src = img.src;
+					lightbox.classList.add("show");
+				});
+			});
+
+			lightbox.addEventListener("click", () => {
+				lightbox.classList.remove("show");
+				setTimeout(() => {
+					lightboxImg.src = "";
+				}, 250);
+			});
+		</script>
+	</body>
+</html>

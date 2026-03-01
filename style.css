@@ -307,3 +307,99 @@ section {
 .nav-links a:hover {
 	color: #555;
 }
+
+/* Art Page */
+
+.art-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	align-items: flex-start;
+}
+
+.art-item {
+	position: relative;
+	cursor: pointer;
+}
+
+.art-item img {
+	height: 400px;
+	width: auto;
+	object-fit: contain;
+	background: #f8f8f8;
+	border-radius: 4px;
+	transition: transform 0.25s ease;
+}
+
+
+.art-overlay {
+	height: 400px;
+	width: auto;
+	border-radius: 4px;
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0);
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition:
+		background 0.2s ease,
+		opacity 0.2s ease;
+	pointer-events: none;
+}
+
+.art-item:hover .art-overlay {
+	background: rgba(0, 0, 0, 0.6);
+	opacity: 1;
+}
+
+.art-overlay span {
+	font-size: 1.1rem;
+	font-weight: 700;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	transform: translateY(5px);
+	transition:
+		opacity 0.2s ease,
+		transform 0.2s ease;
+}
+
+.art-item:hover .art-overlay span {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.lightbox {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	z-index: 2000;
+
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.25s ease;
+}
+
+.lightbox.show {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.lightbox-content img {
+	max-width: 90vw;
+	max-height: 90vh;
+	border-radius: 6px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+	transform: scale(0.95);
+	transition: transform 0.25s ease;
+}
+
+.lightbox.show .lightbox-content img {
+	transform: scale(1);
+}
