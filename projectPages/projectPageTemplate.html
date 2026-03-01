@@ -8,17 +8,7 @@
 	</head>
 	<body>
 		<!-- NAVBAR -->
-		<nav class="navbar">
-			<div class="container nav-inner">
-				<a href="/index.html" class="nav-logo">Home</a>
-
-				<div class="nav-links">
-					<a href="projects-software.html">Software</a>
-					<a href="projects-games.html">Games</a>
-					<a href="projects-art.html">Art</a>
-				</div>
-			</div>
-		</nav>
+		<nav id="navbar" class="navbar"></nav>
 
 		<!-- Project Hero Section -->
 		<section class="project-hero">
@@ -70,5 +60,12 @@
 				</div>
 			</div>
 		</section>
+		<script>
+			fetch("/components/navbar.html")
+				.then((response) => response.text())
+				.then((html) => {
+					document.getElementById("navbar").innerHTML = html;
+				});
+		</script>
 	</body>
 </html>

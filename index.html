@@ -8,17 +8,7 @@
 	</head>
 	<body>
 		<!-- NAVBAR -->
-		<nav class="navbar">
-			<div class="container nav-inner">
-				<a href="index.html" class="nav-logo">Home</a>
-
-				<div class="nav-links">
-					<a href="ListPages/SoftwareList.html">Software</a>
-					<a href="ListPages/GameList.html">Games</a>
-					<a href="ListPages/ArtList.html">Art</a>
-				</div>
-			</div>
-		</nav>
+		<nav id="navbar" class="navbar"></nav>
 
 		<!-- HERO SECTION -->
 		<header class="hero">
@@ -125,5 +115,12 @@
 				<a href="projectListTemplate.html">Projects List Template</a>
 			</nav>
 		</footer>
+		<script>
+			fetch("/components/navbar.html")
+				.then((response) => response.text())
+				.then((html) => {
+					document.getElementById("navbar").innerHTML = html;
+				});
+		</script>
 	</body>
 </html>
